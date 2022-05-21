@@ -28,9 +28,16 @@ import (
 	"github.com/docker/docker/pkg/term" //nolint
 	"github.com/spf13/cobra"
 
+	"github.com/golang/protobuf/descriptor"
+	"github.com/golang/protobuf/proto"
+
 	"helm.sh/helm/v3/cmd/helm/require"
 	"helm.sh/helm/v3/pkg/action"
 )
+
+var _ = descriptor.ForMessage
+var _ = proto.MessageName
+var _ = proto.MessageType
 
 const registryLoginDesc = `
 Authenticate to a remote registry.
