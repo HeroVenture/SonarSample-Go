@@ -35,6 +35,8 @@ jobs:
       - name: Generate style report
         run: golangci-lint run --out-format checkstyle > golangci-report.xml
         continue-on-error: true
+      - name: Run unit tests
+        run: make test-coverage
       - name: Analyze with SonarCloud
         uses: sonarsource/sonarcloud-github-action@master
         env:
