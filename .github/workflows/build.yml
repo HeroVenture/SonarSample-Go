@@ -56,7 +56,7 @@ jobs:
         with:
           java-version: 11
       - name: Generate SonarCloud report
-        run: java -Dconfig.file=reportconfig.properties -Dsonar.token=$SONAR_TOKEN -Dsonar.branch=$GITHUB_REF_NAME -jar tools/report.jar
+        run: java -Dconfig.file=tools/reportconfig.properties -Dsonar.token=$SONAR_TOKEN -Dsonar.branch=$GITHUB_REF_NAME -jar tools/report.jar
       - name: Upload report
         uses: actions/upload-artifact@v3
         with:
