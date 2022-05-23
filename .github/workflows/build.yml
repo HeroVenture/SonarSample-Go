@@ -61,5 +61,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: report
-          path: ${{ github.workspace }}/tools/report.pdf
+          path: ${{ github.workspace }}/report.pdf
       
